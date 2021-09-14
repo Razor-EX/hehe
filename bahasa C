@@ -1,0 +1,62 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+int main()
+{
+    char nama[10];
+    char pendidikan[10];
+    int gol,jam,gaji,gajiperbulan = 2000000,tunjabatan,tunpendidikan,lembur;
+    
+    
+    printf("PROGRAM HITUNG GAJI KARYAWAN \n");
+    printf("Nama Karyawan \n");
+    scanf("%s", nama);
+    printf("Golongan Jabatan  \n");
+    scanf("%i", &gol);
+    printf("Pendidikan (SMA,D3,S1)   \n");
+    scanf("%s",pendidikan);
+    printf("Jumlah jam kerja \n");
+    scanf("%i",&jam);
+    
+    if(gol = 1){
+    tunjabatan = gajiperbulan*5/100;    
+    }else if(gol = 2){
+    tunjabatan = gajiperbulan*10/100;    
+    }else if(gol = 3){
+    tunjabatan = gajiperbulan*15/100;        
+    }
+    
+    if(strcmp(pendidikan, "SMA") == 0){
+        tunpendidikan = gajiperbulan*25/10/100;
+    }else if(strcmp(pendidikan, "D3") == 0){
+        tunpendidikan = gajiperbulan*5/100; 
+    }else if(strcmp(pendidikan, "S1") == 0){
+        tunpendidikan = gajiperbulan*10/100; 
+    }
+    
+    if(jam > 8){
+    lembur = (jam-8)*3000;    
+    }else{
+        lembur = 0;
+    }
+    
+    gaji = gajiperbulan+tunjabatan+tunpendidikan+lembur;    
+    
+    
+    printf("Nama Karyawan %s \n",nama);
+    printf("    Tunjangan Jabatan Rp.%i \n",tunjabatan);
+    printf("    Tunjangan Pendidikan Rp.%i \n",tunpendidikan);
+    printf("    Honor lembur RP.%i \n",lembur);
+    printf("Total Gaji %i \n",gaji);
+    
+    return 0;
+}
