@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int harga=2000,jam;
+    
+    printf("Jam bermain warnet = ");
+    scanf("%i",&jam);
+    
+    if(jam>5){
+        harga = harga*jam-(harga*jam*20/100);
+    }else{
+    harga = harga*jam;    
+    }
+    
+    
+    printf("Harga yang harus dibayar Rp.%i",harga);
+    
+
+    return 0;
+}
