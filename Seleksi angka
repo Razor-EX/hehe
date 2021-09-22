@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int digit1,digit10,digit100,nilai;
+    
+    
+    while (nilai < 1 || nilai > 250){
+        printf("Masukkan Nilai \n");
+        scanf("%i",&nilai);
+    }
+        
+        printf("Angka yang dimaksukkan = %i\n",nilai);
+        if(nilai >= 100){
+            digit100 = nilai/100;
+            printf("%i Angka ratusan\n",digit100);
+        }else{
+            printf("Tidak ada angka ratusan\n");
+        }
+        if(nilai >= 10){
+            digit10 = nilai%100/10;
+            printf("%i Angka puluhan\n",digit10);
+        }else{
+            printf("Tidak ada angka puluhan\n");
+        }
+        if(nilai >= 1){
+            digit1 = nilai%10;      
+            printf("%i Angka satuan\n",digit1);
+        }
+    
+
+    return 0;
+}
