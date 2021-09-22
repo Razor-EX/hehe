@@ -1,0 +1,35 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int nilai;
+    
+    while(nilai < 1 || nilai > 385){
+        
+    printf("Masukkan Nilai 1-385 = ");
+    scanf("%i",&nilai);
+    
+    if(nilai>=1 && nilai<=385){
+        printf("###Menghitung angka dari 1-%i###\n",nilai);
+        for(int i=1;i<=nilai;i++){
+            printf("%i ",i);
+            
+        }
+        printf("\nPenghitung selesai");
+    }else{
+        printf("Ulangi inputan karena bilangan tidak sesuai syarat\n");
+    }
+    
+    }
+    
+
+    return 0;
+}
