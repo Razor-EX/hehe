@@ -1,30 +1,30 @@
 #include <stdio.h>
 #include <math.h>
-void pangkat(int *angka){
+void pangkat(int *bilangan){
 int pang;
-printf("nilai %i dipangkatkan berapa? = ",*angka);
+printf("nilai %i dipangkatkan berapa? = ",*bilangan);
 scanf("%i",&pang);
-*angka = pow(*angka,pang);
+*bilangan = pow(*bilangan,pang);
 }
-void akar(int *a2){
-if (fmod(sqrt(*a2),1) != 0)
+void akar(int *bilcek2){
+if (fmod(sqrt(*bilcek2),1) != 0)
 {
-printf("%i tidak memiliki akar kuadrat\n", *a2);
+printf("%i tidak memiliki akar kuadrat\n", *bilcek2);
 return 0;
 }
 else
 {
-printf("\Akar kuadrat %i = %.0lf\n", *a2, sqrt(*a2));
+printf("\Akar kuadrat %i = %.0lf\n", *bilcek2, sqrt(*bilcek2));
 return(0);
 }
 }
 int main(void){
-int angka,a1,a2;
+int bilangan,bilcek1,bilcek2;
 printf("Masukkan Nilai Yang akan di cek = ");
-scanf("%i",&angka);
-a1 = angka;
-a2 = angka;
-pangkat(&angka);
-printf("pangkat dari %i = %i \n",a1,angka);
-akar(&a2);
+scanf("%i",&bilangan);
+bilcek1 = bilangan;
+bilcek2 = bilangan;
+pangkat(&bilangan);
+printf("pangkat dari %i = %i \n",bilcek1,bilangan);
+akar(&bilcek2);
 }
